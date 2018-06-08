@@ -161,5 +161,5 @@ function Country() {
     }
 }
 
-global.Country = Country;
-module.exports = Country;
+
+export default Country;
