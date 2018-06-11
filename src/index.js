@@ -10,7 +10,7 @@ import names from '../data/names';
 import phone from '../data/phone';
 
 function Country() {
-    let countryInfo = null;
+    var countryInfo = null;
 
     this.FIND_BY_ISO_ALPHA_2 = 1;
     this.FIND_BY_ISO_ALPHA_3 = 2;
@@ -35,7 +35,8 @@ function Country() {
      * @param flag
      * @returns {*}
      */
-    this.find = function (needle, flag = 1) {
+    this.find = function (needle, flag) {
+        flag = flag || 1;
         switch (parseInt(flag)) {
             case this.FIND_BY_ISO_ALPHA_2:
                 if(needle===null || needle===undefined) {
@@ -69,7 +70,8 @@ function Country() {
      * @param hook
      * @returns {*}
      */
-    this.info = function (hook=null) {
+    this.info = function (hook) {
+        hook = hook || null;
         if(countryInfo===null) {
             return null;
         }
