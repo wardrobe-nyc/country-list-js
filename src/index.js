@@ -20,7 +20,7 @@ function Country() {
 
     this.all = function () {
         const all = [];
-        for(const key in names) {
+        for(var key in names) {
             if(names.hasOwnProperty(key)) {
                 all.push(pullDataForCountry(key));
             }
@@ -147,7 +147,7 @@ function Country() {
      * @returns {*}
      */
     function findInObject(haystack, needle) {
-        for(const key in haystack) {
+        for(var key in haystack) {
             if(haystack.hasOwnProperty(key)) {
                 //check if we have a match
                 if(haystack[key].toLowerCase()===needle.toLowerCase()) {
