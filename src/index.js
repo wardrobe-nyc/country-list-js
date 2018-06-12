@@ -19,7 +19,7 @@ function Country() {
     this.FIND_BY_CURRENCY = 5;
 
     this.all = function () {
-        const all = [];
+        var all = [];
         for(var key in names) {
             if(names.hasOwnProperty(key)) {
                 all.push(pullDataForCountry(key));
@@ -110,7 +110,7 @@ function Country() {
     function pullDataForCountry(code) {
         if(names[code]===undefined)
             return null;
-        const currencyInfo = currency_info[currency[code]];
+        var currencyInfo = currency_info[currency[code]];
         return {
             continent: continents[continent[code]],
             name: names[code],
